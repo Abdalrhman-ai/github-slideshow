@@ -38,14 +38,14 @@ model.compile(optimizer='adam',
 
 model.fit(train_features, train_labels, epochs=5)
 
-classes = ["airplane","car","bird","cat","deer","dog","frog","horse","ship","truck"]
+classes = ["airplane","carr","bird","cat","deer","dog","frog","horse","ship","truck"]
 
 model_out = model.predict(test_features)
 model_out[:5]
 y_classes = [np.argmax(element) for element in model_out]
 y_classes[:5]
 test_labels[:5]
-label_out=classes[y_classes[100]]
+label_out=classes[y_classes[120]]
 print(label_out)
 #print(y_classes)
 def imshow(X, y, index):
@@ -54,5 +54,5 @@ def imshow(X, y, index):
     A=plt.xlabel(classes[y[index]])
     plt.title(label_out)
     print(A)
-imshow(test_features, test_labels, 100)
+imshow(test_features, test_labels, 120)
 plt.show()
